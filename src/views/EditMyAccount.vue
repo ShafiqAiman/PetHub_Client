@@ -225,7 +225,7 @@ export default {
                 
                 .then(response =>{
                     window.confirm("Your Profile is updated!");
-                    window.location = "http://localhost:8080/myaccount"
+                    window.location = "https://pethubmy.netlify.app/myaccount"
 
                 })
                 .catch(error => {

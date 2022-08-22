@@ -89,7 +89,7 @@ export default {
 									// this.$router.go(-1);
 								}else{
 									// this.$router.push('/profilesetup')
-									window.location = "http://localhost:8080/profilesetup"
+									window.location = "https://pethubmy.netlify.app/profilesetup"
 								}
 
 							})

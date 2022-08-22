@@ -166,7 +166,7 @@ export default {
             
             window.confirm("Your profile is set up successfully!")
                 
-            window.location = "http://localhost:8080/"
+            window.location = "https://pethubmy.netlify.app/"
             }
 
             
