@@ -214,7 +214,8 @@ export default {
       this.filterpetStatus = this.filtertypeOfPet.filter(pet => pet.petStatus.toLowerCase().includes(this.PetStatus.toLowerCase()))
       this.filterhealthStatus = this.filterpetStatus.filter(pet => pet.healthStatus.toLowerCase().includes(this.HealthStatus.toLowerCase()))
       this.filterage = this.filterhealthStatus.filter(pet => (pet.get_age <= this.PetAge) && (pet.get_age >= this.MinAge))
-      this.filterSearch = this.filterage.filter(pet => pet.nameOfPet.toLowerCase().includes(this.search.toLowerCase()))
+      this.filterSearch = this.filterage.filter(pet => pet.nameOfPet.toLowerCase().includes(this.search.toLowerCase()) || 
+      pet.typeOfPet.toLowerCase().includes(this.search.toLowerCase()))
 
       this.TotalPages = Math.ceil(this.filterhealthStatus.length/this.perPage)
       
