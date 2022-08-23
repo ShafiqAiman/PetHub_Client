@@ -43,7 +43,7 @@
                     <img :src="guardian.get_profilephoto" class="profilephoto">
                   </template>
                     <div class="container">
-                      <div style="height:80px">
+                      <div>
                         <h3 class="title">{{ guardian.fullname }}, {{ guardian.age }}</h3>
                       </div>
                       

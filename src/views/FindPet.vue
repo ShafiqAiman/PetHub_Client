@@ -35,10 +35,10 @@
             <div class="posts" v-for="pet in filteredPosts.slice((currentPage-1) * perPage,(currentPage-1) * perPage+perPage)" :key="pet.id">
               <router-link to="" style="text-decoration:none;" @click="newWindow(pet.get_absolute_url)">
                   <figure class="polaroid">
-                    <img v-if="pet.get_uploadphoto1" :src="pet.get_uploadphoto1" style="width:100%;border-top-left-radius: 25px;border-top-right-radius: 25px;max-height:200px;">
-                    <img v-else :src="defaultImage" style="width:100%;border-top-left-radius: 25px;border-top-right-radius: 25px;max-height:200px;">
+                    <img class="petpicture" v-if="pet.get_uploadphoto1" :src="pet.get_uploadphoto1">
+                    <img class="petpicture" v-else :src="defaultImage">
                     <div class="container">
-                      <div style="height:80px">
+                      <div>
                         <template v-if="pet.nameOfPet.length >18">
                           <h3 class="title">{{ pet.nameOfPet.substring(0,16)+'...' }}, {{ pet.get_age}}</h3>
                         </template>
@@ -256,12 +256,15 @@ export default {
     margin-right: 5px;
   }
 
-  .profilephoto{
-      width:100%;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
-      height:200px;
-    }
+  .petpicture{
+    width:100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height:200px;
+    object-fit: cover;
+  }
+      
+    
 
     figure.polaroid {
       width: 100%;
